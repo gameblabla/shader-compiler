@@ -84,8 +84,7 @@ struct RuntimeInfo {
     bool glasm_use_storage_buffers{};
 
     /// Transform feedback state for each varying
-    std::array<TransformFeedbackVarying, 256> xfb_varyings{};
-    u32 xfb_count{0};
+    std::vector<TransformFeedbackVarying> xfb_varyings;
 };
 
 } // namespace Shader

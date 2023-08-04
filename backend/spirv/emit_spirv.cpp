@@ -386,7 +386,7 @@ void SetupSignedNanCapabilities(const Profile& profile, const IR::Program& progr
 }
 
 void SetupTransformFeedbackCapabilities(EmitContext& ctx, Id main_func) {
-    if (ctx.runtime_info.xfb_count == 0) {
+    if (ctx.runtime_info.xfb_varyings.empty()) {
         return;
     }
     ctx.AddCapability(spv::Capability::TransformFeedback);
